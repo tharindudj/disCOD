@@ -51,8 +51,10 @@ export async function init(): Promise<void>
     }
 
     let lines = data.trim().split("\n")
-
+   
         lineToSend = lines[lines.length - 1]
+            .replace("^1", "").replace("^2", "").replace("^3", "").replace("^4", "")
+            .replace("^5", "").replace("^6", "").replace("^7", "").replace("^8", "")
 
 
         if (lineToSend.includes("say;") && !lineToSend.includes("QUICKMESSAGE")) {
